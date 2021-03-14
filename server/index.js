@@ -8,12 +8,12 @@ import postRoutes from './routes/posts.js';
 const app = express();
 dotenv.config();
 
-app.json({ limit: '30mb', extended: true }) // limit picture size when uploaded
-app.urlencoded({ limit: '30mb', extended: true })
+app.use(express.json({ limit: '30mb', extended: true })) // limit picture size when uploaded
+app.use(express.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors()); //cors must be before routes
 
-app.get('/', (res, req) => {
-  res.send("This is the Food blog API!")
+app.get('/', (req, res) => {
+  res.send("This is the Food blog API!");
 })
 
 //starts the paths with /posts, meaning everything in postRoutes starts at localhost:5000/posts/
