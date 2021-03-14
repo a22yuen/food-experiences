@@ -1,5 +1,4 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
@@ -9,8 +8,8 @@ import postRoutes from './routes/posts.js';
 const app = express();
 dotenv.config();
 
-app.use(bodyParser.json({ limit: '30mb', extended: true })) // limit picture size when uploaded
-app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
+app.json({ limit: '30mb', extended: true }) // limit picture size when uploaded
+app.urlencoded({ limit: '30mb', extended: true })
 app.use(cors()); //cors must be before routes
 
 app.get('/', (res, req) => {
