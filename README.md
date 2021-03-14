@@ -1,4 +1,4 @@
-# food-experiences
+# Food Experiences
 
 A web application where you can share your experiences at restaurants!  
 Created using MongoDB Atlas, Express, React-Redux, and Node.  
