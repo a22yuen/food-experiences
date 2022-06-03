@@ -1,7 +1,8 @@
 //api file to categorize all CRUD api calls through axios 
 import axios from 'axios';
 
-const url = 'https://food-experiences-backend.herokuapp.com/posts';
+const url = 'https://food-experiences-backend-2.herokuapp.com/posts';
+// const url = 'http://localhost:5000/posts'
 
 export const fetchPosts = () => axios.get(url);
 export const createPost = (newPost) => axios.post(url, newPost);
